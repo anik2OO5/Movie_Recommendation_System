@@ -10,7 +10,7 @@ import gdown
 #     data = response.json()
 #     return "https://image.tmdb.org/t/p/w500/" + data["poster_path"]
 
-FILE_ID = "Yhttps://drive.google.com/file/d/1RX2zKonVYKaWmT9FsJaPs9ngKmBOpAt2/view?usp=drive_link"
+FILE_ID = "1RX2zKonVYKaWmT9FsJaPs9ngKmBOpAt2"
 FILE_PATH = "similarity.pkl"
 
 if not os.path.exists(FILE_PATH):
@@ -73,8 +73,8 @@ selected_movie_name=st.selectbox(
     movies['title'].values
 )
 
-print(requests.get("https://www.google.com").status_code)
-print(requests.get("https://api.themoviedb.org").status_code)
+#print(requests.get("https://www.google.com").status_code)
+#print(requests.get("https://api.themoviedb.org").status_code)
 
 if st.button('Recommend'):
     names,posters = recommend(selected_movie_name)
